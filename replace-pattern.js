@@ -31,16 +31,16 @@ if (!!pattern && !!substitute && !!filename) {
 	console.log(`
 Replace Pattern (v1.0.0)
 
-A tool to replace given pattern with substitute inside file
+A tool to replace given pattern with substitute inside file.
 
-Syntax
-  replace-pattern <patter> <substitute> <file>
-  replace-pattern <patter> --filter=<criteria> <file>
+Syntax:
+  replace-pattern <pattern> <substitute> <file>
+  replace-pattern <pattern> --filter=<criteria> <file>
 
-Options
+Options:
   --filter    Criteria to modify the matched chunk 
 
-Usage
+Usages:
   replace-pattern 'foo' 'bar' file.txt
   replace-pattern '\\/\\{[a-zA-Z0-9_-]+\\}' '--filter={"{":"&#123;","}":"&#125;"}' file.txt
 	`);
