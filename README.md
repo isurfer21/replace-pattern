@@ -27,7 +27,7 @@ Options:
 
 Usages:
   replace-pattern 'foo' 'bar' file.txt
-  replace-pattern '\\/\\{[a-zA-Z0-9_-]+\\}' '--filter={"{":"&#123;","}":"&#125;"}' file.txt
+  replace-pattern '\/\{[a-zA-Z0-9_-]+\}' '--filter={"{":"&#123;","}":"&#125;"}' file.txt
 ```
 
 It would also get displayed in case of missing parameters.
