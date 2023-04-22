@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 pushd . > '/dev/null';
 SCRIPT_PATH="${BASH_SOURCE[0]:-$0}";
 while [ -h "$SCRIPT_PATH" ];
@@ -10,4 +10,4 @@ cd "$( dirname -- "$SCRIPT_PATH"; )" > '/dev/null';
 SCRIPT_PATH="$( pwd; )";
 popd  > '/dev/null';
 # echo $SCRIPT_PATH
-deno run --allow-read --allow-write $SCRIPT_PATH/replace-pattern.js "$@"
+deno run --allow-read --allow-write $SCRIPT_PATH/../src/replace-pattern.js "$@"

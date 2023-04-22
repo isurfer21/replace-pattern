@@ -4,4 +4,4 @@ while ($ScriptPath -and (Get-Item $ScriptPath).LinkType -eq 'SymbolicLink') {
 }
 $ScriptPath = Split-Path $ScriptPath
 # Write-Output $ScriptPath
-deno run --allow-read --allow-write (Join-Path $ScriptPath "replace-pattern.js") $args
+deno run --allow-read --allow-write (Join-Path $ScriptPath "..\src\replace-pattern.js") $args

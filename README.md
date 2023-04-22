@@ -7,7 +7,9 @@ Due to this feature it can be used for replacing the matched selction either wit
 It would require [Deno](https://deno.land/manual/getting_started/installation) to be installed on system prior its use.
 
 ## Setup
-Download the repository and make the symbolic link of given bash file in your system's `/bin` folder to access the app across system.
+Download the repository and make the symbolic link of given shell script inside `bin/` folder to your system's global `/bin` folder to access the app across system.
+
+Alternatively, copy the absolute path of `bin/` folder and register it in local/global environment variable on _windows_ whereas export the path in `.bash_profile` or `.bashrc` on _macOS_/_linux_.
 
 ## Usage
 You can see the available options via below command
@@ -33,10 +35,16 @@ Usages:
 It would also get displayed in case of missing parameters.
 
 ## Compatibility
-Currently it is tested only at _macOS_.
+|OS      |Tested |
+|--------|-------|
+|macOS   |   ✓   |
+|Windows |   ✓   |
+|Linux   |   ✓   |
 
-## Contribute
-Although this app will work on _Windows_ as well by using below command otherwise you may need to create batch file for _Windows_ to make it easy to use over there.
+**Tips**: To run the app on `macOS` or `linux` use `replace-pattern.sh` whereas on `windows` use `replace-pattern.cmd` & `replace-pattern.ps1`.
+
+## Raw usage
+It can be used directly with `deno` via below command.
 
 ```
 > deno run --allow-read --allow-write replace-pattern.js <pattern> <substitute> <file>
